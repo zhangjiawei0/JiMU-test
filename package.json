@@ -1,0 +1,19 @@
+{
+  "name": "jimu",
+  "version": "1.0.0",
+  "description": "jimu test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangjiawei0/JiMU-test.git"
+  },
+  "author": "zhangjiawei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangjiawei0/JiMU-test/issues"
+  },
+  "homepage": "https://github.com/zhangjiawei0/JiMU-test#readme"
+}
