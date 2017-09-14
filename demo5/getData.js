@@ -1,24 +1,32 @@
-var Nightmare = require("nightmare");
-var nightmare = Nightmare({show:false})
+var Nightmare = require("nightmare")
+var nightmare = Nightmare({show:true})
 nightmare
     .goto("https://box.jimu.com/Venus/List")
-    .evaluate(function(){
-        var projects = document.querySelectorAll(".project");
-        var lists = [], obj = {};
+    .evaluate(() => {
+        var projects = document.querySelectorAll(".project")
+        var lists = [], obj = {}
         for(let i = 0; i < projects.length; i++){
-            obj.name = projects[i].getElementsByClassName("title")[0].innerText;
-            obj.rate = projects[i].getElementsByClassName("num")[0].innerText;
-            obj.month = projects[i].getElementsByClassName("num")[1].innerText;
-            obj.status = projects[i].getElementsByClassName("num")[2].innerText;
-            lists.push(obj);
-            obj = {};
+            obj.name = projects[i].getElementsByClassName("title")[0].innerText
+            obj.rate = projects[i].getElementsByClassName("num")[0].innerText
+            obj.month = projects[i].getElementsByClassName("num")[1].innerText
+            obj.status = projects[i].getElementsByClassName("num")[2].innerText
+            lists.push(obj)
+            obj = {}
         } 
-        return lists;
+        return lists
     })
     .end()
-    .then(function(response){
-        console.log(response);
+    .then(res => {
+        res.forEach(val => {
+            console.log(`
+            {
+                name : ${val.name}
+                rate : ${val.rate}
+                month : ${val.month}
+                status : ${val.status}
+            }`)
+        })
     })
-    .catch(function(error){
-        console.log('Search failed:', error);
+    .catch(err => {
+        console.log('Search failed:', err)
     })
