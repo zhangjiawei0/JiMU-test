@@ -1,7 +1,5 @@
 # vue2.0抽奖程序
 
-----------
-
 ## Build Setup
 
 ``` bash

@@ -1,7 +1,5 @@
 # Nightmare爬取数据
 
-----------
-
 ## Build Setup
 
 ``` bash

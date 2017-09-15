@@ -1,6 +1,6 @@
 # 积木盒子笔试题
 
-----------
+
 ## demo1（CSS青蛙表情）
 
 效果图（GIF）
@@ -17,10 +17,12 @@
 ![lottery](http://oq8xgvbrl.bkt.clouddn.com/lottery.gif)
 
 运行
+
 ``` bash
 npm install
 npm run dev
 ```
+
 
 > 由`vue-cli`构建，使用`SASS`编写样式，抽奖组件为`components`文件夹下的`lottery.vue`。
 
@@ -31,10 +33,12 @@ npm run dev
 ![about](http://oq8xgvbrl.bkt.clouddn.com/about.gif)
 
 运行
+
 ``` bash
 npm install
 npm start
 ```
+
 
 > 入口文件`app.js`，访问地址：http://localhost:3000/，字体使用`Montserrat-Regular`，与原网页有细微差别。
 
@@ -45,6 +49,7 @@ npm start
 ![data](http://oq8xgvbrl.bkt.clouddn.com/data.gif)
 
 运行
+
 ``` bash
 npm install
 npm getData.js
