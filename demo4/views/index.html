@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/style.css">
+    <title>{{data.title}}</title>
+</head>
+<body>
+    <div id="jm-aboutus">
+        <div class="features-wrap">
+            <span class="jimu-logo">
+                <img src="/images/jimu_logo-42df8848d5.png" alt="积木盒子logo">
+            </span>
+            <span class="label">{{data.features_title}}</span>
+            <div class="features">
+                {% for item in data.fetures %}
+                    <div class="feature-safe feature">
+                        <img src="{{item.url}}" alt="安全保障">
+                        <p class="tit">{{item.title}}</p>
+                        {% for i in item['details'] %}
+                            <p>{{i}}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="choice swiper-container swiper-container-horizontal">
+            <span class="label">{{data.choice_title}}</span>
+            <div id="swiper-wrapper" class="swiper-wrapper">
+                {% for item in data.choice %}
+                    <div class="swiper-slide">
+                        <p class="tit">{{item.year}}</p>
+                        <table>
+                            <tbody>
+                                {% for i in item['lists'] %}
+                                    <tr>
+                                        <td>{{i.month}}</td>
+                                        <td>{{i.info}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div> 
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+        </div>
+        <div class="logo-history-wrap">
+            <span class="label">{{data.history_title}}</span>
+            <div class="logo-history">
+                {% for item in data.intro %}
+                    <p>{{item.info}}</p>
+                {% endfor %}
+                
+                {% for item in data.history %}
+                    <img src="{{item.url}}">
+                    <p class="tit">{{item.title}}</p>
+                    {% for i in item['details'] %}
+                        <p class="content">{{i}}</p>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/swiper-3.4.2.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        }),
+        swiperWrap = document.getElementById('swiper-wrapper');
+        swiperWrap.style.height = swiperWrap.offsetHeight + 'px';
+    </script>
+</body>
+</html>
