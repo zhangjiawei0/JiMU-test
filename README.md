@@ -5,10 +5,11 @@
 
 效果图（GIF）
 
-![frog](http://oq8xgvbrl.bkt.clouddn.com/frog.gif)
+![frog](http://oq8xgvbrl.bkt.clouddn.com/frog1.gif)
 
 ## demo2（javascript发布/订阅模式）
 
+实现先发布后订阅功能
 
 ## demo3（vue2.0抽奖程序）
 
@@ -40,7 +41,7 @@ npm start
 ```
 
 
-> 入口文件`app.js`，访问地址：http://localhost:3000/，字体使用`Montserrat-Regular`，与原网页有细微差别。
+> 入口文件`app.js`，访问地址：http://localhost:3000/， 字体使用`Montserrat-Regular`，与原网页有细微差别。
 
 ## demo5（Nightmare爬取数据）
 
